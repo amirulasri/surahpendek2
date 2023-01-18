@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Surah Pendek V2
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,16 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Surah Pendek V2</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="setFilteredItems" show-clear-button="focus" value=""></ion-searchbar>
+    <ion-list>
+      <ion-item *ngFor="let item of items" (click)="navigateSurahPages(item.page)">
+        <ion-label id="surahName">{{item.surahName}}</ion-label>
+      </ion-item>
+    </ion-list>
   </div>
 </ion-content>

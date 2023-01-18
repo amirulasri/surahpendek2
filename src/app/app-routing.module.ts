@@ -11,6 +11,26 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'al-qadr',
+    loadChildren: () => import('./al-qadr/al-qadr.module').then( m => m.AlQadrPageModule)
+  },
+  {
+    path: 'an-nas',
+    loadChildren: () => import('./an-nas/an-nas.module').then( m => m.AnNasPageModule)
+  },
+  {
+    path: 'al-falaq',
+    loadChildren: () => import('./al-falaq/al-falaq.module').then( m => m.AlFalaqPageModule)
+  },
+  {
+    path: 'al-kafirun',
+    loadChildren: () => import('./al-kafirun/al-kafirun.module').then( m => m.AlKafirunPageModule)
+  },
+  {
+    path: 'al-ikhlas',
+    loadChildren: () => import('./al-ikhlas/al-ikhlas.module').then( m => m.AlIkhlasPageModule)
+  },
 ];
 
 @NgModule({
