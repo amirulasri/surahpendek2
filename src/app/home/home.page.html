@@ -14,7 +14,7 @@
   </ion-header>
 
   <div id="container">
-    <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="setFilteredItems" show-clear-button="focus" value=""></ion-searchbar>
+    <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()" show-clear-button="focus" value=""></ion-searchbar>
     <ion-list>
       <ion-item *ngFor="let item of items" (click)="navigateSurahPages(item.page)">
         <ion-label id="surahName">{{item.surahName}}</ion-label>
